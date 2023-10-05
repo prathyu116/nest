@@ -1,0 +1,11 @@
+<script type="text/javascript">
+    // http://localhost:3000
+const sse = new EventSource("/api/event")
+sse.onmessage  = ({data}) => {
+    console.log("fa",data)
+const msg = document.createElement('li');
+msg.innerText = data
+document.body.appendChild(msg)
+}
+
+</script>
